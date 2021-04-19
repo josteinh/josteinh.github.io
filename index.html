@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="mobile-web-app-capable" content="yes">
+    <title>
+        Tanker og tall om Covid-19 - HedgeDoc
+    </title>
+    <link rel="apple-touch-icon" sizes="180x180" href="https://hove-henriksen.it//hedgedoc/icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="https://hove-henriksen.it//hedgedoc/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="https://hove-henriksen.it//hedgedoc/icons/favicon-16x16.png">
+    <link rel="manifest" href="https://hove-henriksen.it//hedgedoc/icons/site.webmanifest">
+    <link rel="mask-icon" href="https://hove-henriksen.it//hedgedoc/icons/safari-pinned-tab.svg" color="#b51f08">
+    <link rel="shortcut icon" href="https://hove-henriksen.it//hedgedoc/icons/favicon.ico">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.0/css/bootstrap.min.css" integrity="sha256-H0KfTigpUV+0/5tn2HXC0CPwhhDhWgSawJdnFd0CGCo=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fork-awesome/1.1.3/css/fork-awesome.min.css" integrity="sha256-ZhApazu+kejqTYhMF+1DzNKjIzP7KXu6AzyXcC1gMus=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css" integrity="sha256-3iu9jgsy9TpTwXKb7bNQzqWekRX7pPK+2OLj3R922fo=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.5.1/themes/prism.min.css" integrity="sha256-vtR0hSWRc3Tb26iuN2oZHt3KRUomwTufNIf5/4oeCyg=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github-gist.min.css" integrity="sha256-tAflq+ymku3Khs+I/WcAneIlafYgDiOQ9stIHH985Wo=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/emojify.js/1.1.0/css/basic/emojify.min.css" integrity="sha256-UOrvMOsSDSrW6szVLe8ZDZezBxh5IoIfgTwdNDgTjiU=" crossorigin="anonymous" />
+    <style>
+        @import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400italic,600,600italic,300italic,300|Source+Serif+Pro|Source+Code+Pro:400,300,500&subset=latin,latin-ext);.markdown-body{font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol;font-size:16px;line-height:1.5;word-wrap:break-word}.markdown-body:after,.markdown-body:before{display:table;content:""}.markdown-body:after{clear:both}.markdown-body>:first-child{margin-top:0!important}.markdown-body>:last-child{margin-bottom:0!important}.markdown-body a:not([href]){color:inherit;text-decoration:none}.markdown-body .absent{color:#c00}.markdown-body .anchor{float:left;padding-right:4px;margin-left:-20px;line-height:1}.markdown-body .anchor:focus{outline:none}.markdown-body blockquote,.markdown-body dl,.markdown-body ol,.markdown-body p,.markdown-body pre,.markdown-body table,.markdown-body ul{margin-top:0;margin-bottom:16px}.markdown-body hr{height:.25em;padding:0;margin:24px 0;background-color:#e7e7e7;border:0}.markdown-body blockquote{padding:0 1em;color:#777;border-left:.25em solid #ddd}.night .markdown-body blockquote{color:#bcbcbc}.markdown-body blockquote>:first-child{margin-top:0}.markdown-body blockquote>:last-child{margin-bottom:0}.markdown-body .loweralpha{list-style-type:lower-alpha}.markdown-body h1,.markdown-body h2,.markdown-body h3,.markdown-body h4,.markdown-body h5,.markdown-body h6{margin-top:24px;margin-bottom:16px;font-weight:600;line-height:1.25}.night .markdown-body h1,.night .markdown-body h2,.night .markdown-body h3,.night .markdown-body h4,.night .markdown-body h5,.night .markdown-body h6{color:#ddd}.markdown-body h1 .fa-link,.markdown-body h2 .fa-link,.markdown-body h3 .fa-link,.markdown-body h4 .fa-link,.markdown-body h5 .fa-link,.markdown-body h6 .fa-link{color:#000;vertical-align:middle;visibility:hidden;font-size:16px}.night .markdown-body h1 .fa-link,.night .markdown-body h2 .fa-link,.night .markdown-body h3 .fa-link,.night .markdown-body h4 .fa-link,.night .markdown-body h5 .fa-link,.night .markdown-body h6 .fa-link{color:#fff}.markdown-body h1:hover .anchor,.markdown-body h2:hover .anchor,.markdown-body h3:hover .anchor,.markdown-body h4:hover .anchor,.markdown-body h5:hover .anchor,.markdown-body h6:hover .anchor{text-decoration:none}.markdown-body h1:hover .anchor .fa-link,.markdown-body h2:hover .anchor .fa-link,.markdown-body h3:hover .anchor .fa-link,.markdown-body h4:hover .anchor .fa-link,.markdown-body h5:hover .anchor .fa-link,.markdown-body h6:hover .anchor .fa-link{visibility:visible}.markdown-body h1 code,.markdown-body h1 tt,.markdown-body h2 code,.markdown-body h2 tt,.markdown-body h3 code,.markdown-body h3 tt,.markdown-body h4 code,.markdown-body h4 tt,.markdown-body h5 code,.markdown-body h5 tt,.markdown-body h6 code,.markdown-body h6 tt{font-size:inherit}.markdown-body h1{font-size:2em}.markdown-body h1,.markdown-body h2{padding-bottom:.3em;border-bottom:1px solid #eee}.markdown-body h2{font-size:1.5em}.markdown-body h3{font-size:1.25em}.markdown-body h4{font-size:1em}.markdown-body h5{font-size:.875em}.markdown-body h6{font-size:.85em;color:#777}.markdown-body ol,.markdown-body ul{padding-left:2em}.markdown-body ol.no-list,.markdown-body ul.no-list{padding:0;list-style-type:none}.markdown-body ol ol,.markdown-body ol ul,.markdown-body ul ol,.markdown-body ul ul{margin-top:0;margin-bottom:0}.markdown-body li>p{margin-top:16px}.markdown-body li+li{margin-top:.25em}.markdown-body dl{padding:0}.markdown-body dl dt{padding:0;margin-top:16px;font-size:1em;font-style:italic;font-weight:700}.markdown-body dl dd{padding:0 16px;margin-bottom:16px}.markdown-body table{display:block;width:100%;overflow:auto;word-break:normal;word-break:keep-all}.markdown-body table th{font-weight:700}.markdown-body table td,.markdown-body table th{padding:6px 13px;border:1px solid #ddd}.markdown-body table tr{background-color:#fff;border-top:1px solid #ccc}.night .markdown-body table tr{background-color:#5f5f5f}.markdown-body table tr:nth-child(2n){background-color:#f8f8f8}.night .markdown-body table tr:nth-child(2n){background-color:#4f4f4f}.markdown-body img{max-width:100%;box-sizing:content-box;background-color:#fff}.markdown-body img[align=right]{padding-left:20px}.markdown-body img[align=left]{padding-right:20px}.markdown-body .emoji{max-width:none;vertical-align:text-top;background-color:transparent}.markdown-body span.frame{display:block;overflow:hidden}.markdown-body span.frame>span{display:block;float:left;width:auto;padding:7px;margin:13px 0 0;overflow:hidden;border:1px solid #ddd}.markdown-body span.frame span img{display:block;float:left}.markdown-body span.frame span span{display:block;padding:5px 0 0;clear:both;color:#333}.markdown-body span.align-center{display:block;overflow:hidden;clear:both}.markdown-body span.align-center>span{display:block;margin:13px auto 0;overflow:hidden;text-align:center}.markdown-body span.align-center span img{margin:0 auto;text-align:center}.markdown-body span.align-right{display:block;overflow:hidden;clear:both}.markdown-body span.align-right>span{display:block;margin:13px 0 0;overflow:hidden;text-align:right}.markdown-body span.align-right span img{margin:0;text-align:right}.markdown-body span.float-left{display:block;float:left;margin-right:13px;overflow:hidden}.markdown-body span.float-left span{margin:13px 0 0}.markdown-body span.float-right{display:block;float:right;margin-left:13px;overflow:hidden}.markdown-body span.float-right>span{display:block;margin:13px auto 0;overflow:hidden;text-align:right}.markdown-body code,.markdown-body tt{padding:.2em 0;margin:0;font-size:85%;background-color:rgba(0,0,0,.04);border-radius:3px}.night .markdown-body code,.night .markdown-body tt{color:#eee;background-color:hsla(0,0%,90.2%,.36)}.markdown-body code:after,.markdown-body code:before,.markdown-body tt:after,.markdown-body tt:before{letter-spacing:-.2em;content:"\00a0"}.markdown-body code br,.markdown-body tt br{display:none}.markdown-body del code{text-decoration:inherit}.markdown-body pre{word-wrap:normal}.markdown-body pre>code{padding:0;margin:0;font-size:100%;word-break:normal;white-space:pre;background:transparent;border:0}.markdown-body .highlight{margin-bottom:16px}.markdown-body .highlight pre{margin-bottom:0;word-break:normal}.markdown-body .highlight pre,.markdown-body pre{padding:16px;overflow:auto;font-size:85%;line-height:1.45;background-color:#f7f7f7;border-radius:3px}.markdown-body pre code,.markdown-body pre tt{display:inline;max-width:auto;padding:0;margin:0;overflow:visible;line-height:inherit;word-wrap:normal;background-color:transparent;border:0}.markdown-body pre code:after,.markdown-body pre code:before,.markdown-body pre tt:after,.markdown-body pre tt:before{content:normal}.markdown-body .csv-data td,.markdown-body .csv-data th{padding:5px;overflow:hidden;font-size:12px;line-height:1;text-align:left;white-space:nowrap}.markdown-body .csv-data .blob-line-num{padding:10px 8px 9px;text-align:right;background:#fff;border:0}.markdown-body .csv-data tr{border-top:0}.markdown-body .csv-data th{font-weight:700;background:#f8f8f8;border-top:0}.markdown-body kbd{display:inline-block;padding:3px 5px;font-size:11px;line-height:10px;color:#555;vertical-align:middle;background-color:#fcfcfc;border:1px solid;border-color:#ccc #ccc #bbb;border-radius:3px;box-shadow:inset 0 -1px 0 #bbb}.news .alert .markdown-body blockquote{padding:0 0 0 40px;border:0}.activity-tab .news .alert .commits,.activity-tab .news .markdown-body blockquote{padding-left:0}.task-list-item{list-style-type:none}.task-list-item label{font-weight:400}.task-list-item.enabled label{cursor:pointer}.task-list-item+.task-list-item{margin-top:3px}.task-list-item-checkbox{float:left;margin:.31em 0 .2em -1.3em!important;vertical-align:middle;cursor:default!important}.markdown-body{font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol;padding-top:40px;padding-bottom:40px;max-width:758px;overflow:visible!important}.markdown-body pre{border:inherit!important}.night .markdown-body pre{filter:invert(100%)}.markdown-body code{color:inherit!important}.markdown-body pre code .wrapper{display:-webkit-inline-flex;display:-moz-inline-flex;display:-ms-inline-flex;display:-o-inline-flex;display:inline-flex}.markdown-body pre code .gutter{float:left;overflow:hidden;-webkit-user-select:none;user-select:none}.markdown-body pre code .gutter.linenumber{text-align:right;position:relative;display:inline-block;cursor:default;z-index:4;padding:0 8px 0 0;min-width:20px;box-sizing:content-box;color:#afafaf!important;border-right:3px solid #6ce26c!important}.markdown-body pre code .gutter.linenumber>span:before{content:attr(data-linenumber)}.markdown-body pre code .code{float:left;margin:0 0 0 16px}.markdown-body .gist .line-numbers{border-left:none;border-top:none;border-bottom:none}.markdown-body .gist .line-data{border:none}.markdown-body .gist table{border-spacing:0;border-collapse:inherit!important}.night .markdown-body .gist table tr:nth-child(2n){background-color:#ddd}.markdown-body code[data-gist-id]{background:none;padding:0;filter:invert(100%)}.markdown-body code[data-gist-id]:after,.markdown-body code[data-gist-id]:before{content:""}.markdown-body code[data-gist-id] .blob-num{border:unset}.markdown-body code[data-gist-id] table{overflow:unset;margin-bottom:unset}.markdown-body code[data-gist-id] table tr{background:unset}.markdown-body[dir=rtl] pre{direction:ltr}.markdown-body[dir=rtl] code{direction:ltr;unicode-bidi:embed}.markdown-body .alert>p{margin-bottom:0}.markdown-body pre.abc,.markdown-body pre.flow-chart,.markdown-body pre.graphviz,.markdown-body pre.mermaid,.markdown-body pre.sequence-diagram{text-align:center;background-color:inherit;border-radius:0;white-space:inherit}.night .markdown-body pre.graphviz .graph>polygon{fill:#333}.night .markdown-body pre.mermaid .sectionTitle,.night .markdown-body pre.mermaid .titleText,.night .markdown-body pre.mermaid text{fill:#fff}.markdown-body pre.abc>code,.markdown-body pre.flow-chart>code,.markdown-body pre.graphviz>code,.markdown-body pre.mermaid>code,.markdown-body pre.sequence-diagram>code{text-align:left}.markdown-body pre.abc>svg,.markdown-body pre.flow-chart>svg,.markdown-body pre.graphviz>svg,.markdown-body pre.mermaid>svg,.markdown-body pre.sequence-diagram>svg{max-width:100%;height:100%}.night .markdown-body .abc path{fill:#eee}.night .markdown-body .abc path.note_selected{fill:##4DD0E1}.night tspan{fill:#fefefe}.night pre rect{fill:transparent}.night pre.flow-chart path,.night pre.flow-chart rect{stroke:#fff}.markdown-body pre>code.wrap{white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space:-o-pre-wrap;word-wrap:break-word}.markdown-body .alert>p,.markdown-body .alert>ul{margin-bottom:0}.markdown-body summary{display:list-item}.markdown-body summary:focus{outline:none}.markdown-body details summary{cursor:pointer}.markdown-body details:not([open])>:not(summary){display:none}.markdown-body figure{margin:1em 40px}.markdown-body img{background-color:transparent}.vimeo,.youtube{cursor:pointer;display:table;text-align:center;background-position:50%;background-repeat:no-repeat;background-size:contain;background-color:#000;overflow:hidden}.vimeo,.youtube{position:relative;width:100%}.youtube{padding-bottom:56.25%}.vimeo img{width:100%;object-fit:contain;z-index:0}.youtube img{object-fit:cover;z-index:0}.vimeo iframe,.youtube iframe,.youtube img{width:100%;height:100%;position:absolute;top:0;left:0}.vimeo iframe,.youtube iframe{vertical-align:middle;z-index:1}.vimeo .icon,.youtube .icon{position:absolute;height:auto;width:auto;top:50%;left:50%;transform:translate(-50%,-50%);color:#fff;opacity:.3;-webkit-transition:opacity .2s;transition:opacity .2s;z-index:0}.vimeo:hover .icon,.youtube:hover .icon{opacity:.6;-webkit-transition:opacity .2s;transition:opacity .2s}.slideshare .inner,.speakerdeck .inner{position:relative;width:100%}.slideshare .inner iframe,.speakerdeck .inner iframe{position:absolute;top:0;bottom:0;left:0;right:0;width:100%;height:100%}.MJX_Assistive_MathML{display:none}.ui-infobar{position:relative;z-index:2;max-width:758px;margin-top:25px;margin-bottom:-25px;color:#777}.toc .invisable-node{list-style-type:none}.ui-toc{position:fixed;bottom:20px;z-index:10000}.ui-toc-label{opacity:.3;background-color:#ccc;border:none}.ui-toc-label,.ui-toc .open .ui-toc-label{-webkit-transition:opacity .2s;transition:opacity .2s}.ui-toc .open .ui-toc-label{opacity:1;color:#fff}.ui-toc-label:focus{opacity:.3;background-color:#ccc;color:#000}.ui-toc-label:hover{opacity:1;background-color:#ccc;-webkit-transition:opacity .2s;transition:opacity .2s}.ui-toc-dropdown{margin-top:23px;margin-bottom:20px;padding-left:10px;padding-right:10px;max-width:45vw;width:25vw;max-height:70vh;overflow:auto;text-align:inherit}.ui-toc-dropdown>.toc{max-height:calc(70vh - 100px);overflow:auto}.ui-toc-dropdown[dir=rtl] .nav{padding-right:0;letter-spacing:.0029em}.ui-toc-dropdown a{overflow:hidden;text-overflow:ellipsis;white-space:pre}.ui-toc-dropdown .nav>li>a{display:block;padding:4px 20px;font-size:13px;font-weight:500;color:#767676}.ui-toc-dropdown .nav>li:first-child:last-child>ul,.ui-toc-dropdown .toc.expand ul{display:block}.ui-toc-dropdown .nav>li>a:focus,.ui-toc-dropdown .nav>li>a:hover{padding-left:19px;color:#000;text-decoration:none;background-color:transparent;border-left:1px solid #000}.night .ui-toc-dropdown .nav>li>a:focus,.night .ui-toc-dropdown .nav>li>a:hover{color:#fff;border-left-color:#fff}.ui-toc-dropdown[dir=rtl] .nav>li>a:focus,.ui-toc-dropdown[dir=rtl] .nav>li>a:hover{padding-right:19px;border-left:none;border-right:1px solid #000}.ui-toc-dropdown .nav>.active:focus>a,.ui-toc-dropdown .nav>.active:hover>a,.ui-toc-dropdown .nav>.active>a{padding-left:18px;font-weight:700;color:#000;background-color:transparent;border-left:2px solid #000}.night .ui-toc-dropdown .nav>.active:focus>a,.night .ui-toc-dropdown .nav>.active:hover>a,.night .ui-toc-dropdown .nav>.active>a{color:#fff;border-left:2px solid #fff}.ui-toc-dropdown[dir=rtl] .nav>.active:focus>a,.ui-toc-dropdown[dir=rtl] .nav>.active:hover>a,.ui-toc-dropdown[dir=rtl] .nav>.active>a{padding-right:18px;border-left:none;border-right:2px solid #000}.ui-toc-dropdown .nav .nav{display:none;padding-bottom:10px}.ui-toc-dropdown .nav>.active>ul{display:block}.ui-toc-dropdown .nav .nav>li>a{padding-top:1px;padding-bottom:1px;padding-left:30px;font-size:12px;font-weight:400}.night .ui-toc-dropdown .nav>li>a{color:#aaa}.ui-toc-dropdown[dir=rtl] .nav .nav>li>a{padding-right:30px}.ui-toc-dropdown .nav .nav>li>ul>li>a{padding-top:1px;padding-bottom:1px;padding-left:40px;font-size:12px;font-weight:400}.ui-toc-dropdown[dir=rtl] .nav .nav>li>ul>li>a{padding-right:40px}.ui-toc-dropdown .nav .nav>li>a:focus,.ui-toc-dropdown .nav .nav>li>a:hover{padding-left:29px}.ui-toc-dropdown[dir=rtl] .nav .nav>li>a:focus,.ui-toc-dropdown[dir=rtl] .nav .nav>li>a:hover{padding-right:29px}.ui-toc-dropdown .nav .nav>li>ul>li>a:focus,.ui-toc-dropdown .nav .nav>li>ul>li>a:hover{padding-left:39px}.ui-toc-dropdown[dir=rtl] .nav .nav>li>ul>li>a:focus,.ui-toc-dropdown[dir=rtl] .nav .nav>li>ul>li>a:hover{padding-right:39px}.ui-toc-dropdown .nav .nav>.active:focus>a,.ui-toc-dropdown .nav .nav>.active:hover>a,.ui-toc-dropdown .nav .nav>.active>a{padding-left:28px;font-weight:500}.ui-toc-dropdown[dir=rtl] .nav .nav>.active:focus>a,.ui-toc-dropdown[dir=rtl] .nav .nav>.active:hover>a,.ui-toc-dropdown[dir=rtl] .nav .nav>.active>a{padding-right:28px}.ui-toc-dropdown .nav .nav>.active>.nav>.active:focus>a,.ui-toc-dropdown .nav .nav>.active>.nav>.active:hover>a,.ui-toc-dropdown .nav .nav>.active>.nav>.active>a{padding-left:38px;font-weight:500}.ui-toc-dropdown[dir=rtl] .nav .nav>.active>.nav>.active:focus>a,.ui-toc-dropdown[dir=rtl] .nav .nav>.active>.nav>.active:hover>a,.ui-toc-dropdown[dir=rtl] .nav .nav>.active>.nav>.active>a{padding-right:38px}.markdown-body[lang^=ja]{font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Helvetica,Arial,Hiragino Kaku Gothic Pro,ヒラギノ角ゴ Pro W3,Osaka,Meiryo,メイリオ,MS Gothic,ＭＳ ゴシック,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol}.ui-toc-dropdown[lang^=ja]{font-family:Source Sans Pro,Helvetica,Arial,Meiryo UI,MS PGothic,ＭＳ Ｐゴシック,sans-serif}.markdown-body[lang=zh-tw]{font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Helvetica,Arial,PingFang TC,Microsoft JhengHei,微軟正黑,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol}.ui-toc-dropdown[lang=zh-tw]{font-family:Source Sans Pro,Helvetica,Arial,Microsoft JhengHei UI,微軟正黑UI,sans-serif}.markdown-body[lang=zh-cn]{font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Helvetica,Arial,PingFang SC,Microsoft YaHei,微软雅黑,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol}.ui-toc-dropdown[lang=zh-cn]{font-family:Source Sans Pro,Helvetica,Arial,Microsoft YaHei UI,微软雅黑UI,sans-serif}.ui-affix-toc{position:fixed;top:0;max-width:15vw;max-height:70vh;overflow:auto}.back-to-top,.expand-toggle,.go-to-bottom{display:block;padding:4px 10px;margin-top:10px;margin-left:10px;font-size:12px;font-weight:500;color:#999}.back-to-top:focus,.back-to-top:hover,.expand-toggle:focus,.expand-toggle:hover,.go-to-bottom:focus,.go-to-bottom:hover{color:#563d7c;text-decoration:none}.back-to-top,.go-to-bottom{margin-top:0}.ui-user-icon{width:20px;height:20px;display:block;border-radius:3px;margin-top:2px;margin-bottom:2px;margin-right:5px;background-position:50%;background-repeat:no-repeat;background-size:contain}.ui-user-icon.small{width:18px;height:18px;display:inline-block;vertical-align:middle;margin:0 0 .2em}small span{line-height:22px}small .dropdown{display:inline-block}small .dropdown a:focus,small .dropdown a:hover{text-decoration:none}.unselectable{-moz-user-select:none;-khtml-user-select:none;-webkit-user-select:none;-o-user-select:none;user-select:none}.night .navbar{background:#333;border-bottom-color:#333;color:#eee}.night .navbar a{color:#eee}.markdown-body h1[id]:before,.markdown-body h2[id]:before,.markdown-body h3[id]:before,.markdown-body h4[id]:before,.markdown-body h5[id]:before,.markdown-body h6[id]:before{display:block;content:" ";margin-top:-55px;height:55px;visibility:hidden}@media print{blockquote,div,img,pre,table{page-break-inside:avoid!important}a[href]:after{font-size:12px!important}}.markdown-body.slides{position:relative;z-index:1;color:#222}.markdown-body.slides:before{content:"";display:block;position:absolute;top:0;left:0;right:0;bottom:0;z-index:-1;background-color:currentColor;box-shadow:0 0 0 50vw}.markdown-body.slides section[data-markdown]{position:relative;margin-bottom:1.5em;background-color:#fff;text-align:center}.markdown-body.slides section[data-markdown] code{text-align:left}.markdown-body.slides section[data-markdown]:before{content:"";display:block;padding-bottom:56.23%}.markdown-body.slides section[data-markdown]>div:first-child{position:absolute;top:50%;left:1em;right:1em;transform:translateY(-50%);max-height:100%;overflow:hidden}.markdown-body.slides section[data-markdown]>ul{display:inline-block}.markdown-body.slides>section>section+section:after{content:"";position:absolute;top:-1.5em;right:1em;height:1.5em;border:3px solid #777}.markdown-body.slides aside.notes{display:none}.markdown-body.slides ol,.markdown-body.slides ul{display:inline-block;text-align:left;margin:0 0 0 1em;padding:0}.markdown-body.slides table{width:50%;margin:0 auto;border-collapse:collapse;border-spacing:0;display:table}.markdown-body.slides table td,.markdown-body.slides table th{text-align:left;padding:.2em .5em;border:none;border-bottom:1px solid}.markdown-body.slides table tr{border-top:0;background-color:#fff}.markdown-body.slides table tr:nth-child(2n){background-color:inherit}.markdown-body.slides table tbody tr:last-child td,.markdown-body.slides table tbody tr:last-child th{border-bottom:none}.markdown-body.slides h1,.markdown-body.slides h2{border-bottom:0}.night .markdown-body.slides h1,.night .markdown-body.slides h2,.night .markdown-body.slides h3,.night .markdown-body.slides h4,.night .markdown-body.slides h5,.night .markdown-body.slides h6{color:#000}.markdown-body section>section:last-child{margin-bottom:1.5em!important}.ui-view-area.black{background-color:#000!important}body{font-smoothing:subpixel-antialiased!important;-webkit-font-smoothing:subpixel-antialiased!important;-moz-osx-font-smoothing:auto!important;text-shadow:0 0 1em transparent,1px 1px 1.2px rgba(0,0,0,.004);-webkit-overflow-scrolling:touch;font-family:Source Sans Pro,Helvetica,Arial,sans-serif;letter-spacing:.025em}.focus,:focus{outline:none!important}::-moz-focus-inner{border:0!important}body.modal-open{overflow-y:auto;padding-right:0!important}
+    </style>
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    	<script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js" integrity="sha256-3Jy/GbSLrg0o9y5Z5n1uw0qxZECH7C6OQpVBgNFYa0g=" crossorigin="anonymous"></script>
+    	<script src="https://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js" integrity="sha256-g6iAfvZp+nDQ2TdTR/VVKJf3bGro4ub5fvWSWVRi2NE=" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/es5-shim/4.5.9/es5-shim.min.js" integrity="sha256-8E4Is26QH0bD52WoQpcB+R/tcWQtpzlCojrybUd7Mxo=" crossorigin="anonymous"></script>
+    <![endif]-->
+</head>
+
+<body>
+    <div id="doc" class="markdown-body container-fluid"><hr><h1 id="Tanker-og-tall-om-Covid-19"><a class="anchor hidden-xs" href="#Tanker-og-tall-om-Covid-19" title="Tanker-og-tall-om-Covid-19"><i class="fa fa-link"></i></a>Tanker og tall om Covid-19</h1><h2 id="Gledelig-nyhet-fra-Pfizer"><a class="anchor hidden-xs" href="#Gledelig-nyhet-fra-Pfizer" title="Gledelig-nyhet-fra-Pfizer"><i class="fa fa-link"></i></a>Gledelig nyhet fra Pfizer?</h2><p>Når de skriver at vaksine gir <code>91,3</code> prosent effektive beskyttelse etter seks mnd,<sup class="footnote-ref"><a href="#fn1" id="fnref1">[1]</a></sup> så tror vanlige lekfolk at da har man bare <code>8,7</code> prosent sjanse til å bli syk, om man blir utsatt for smitte…<br>
+Men slik er det ikke… <img class="emoji" alt=":confused:" src="https://cdnjs.cloudflare.com/ajax/libs/emojify.js/1.1.0/images/basic/confused.png"></p><h3 id="«Efficacy»"><a class="anchor hidden-xs" href="#«Efficacy»" title="«Efficacy»"><i class="fa fa-link"></i></a>«Efficacy»</h3><p>På engelsk brukes ordet «efficacy», hvilket på norsk oversettes til effektivitet.<br>
+Men «efficacy» har en annen betydning enn «effectiveness», som også oversettes til effektivitet på norsk. På engelsk dagligtale brukes også disse ordene ganske synonymt. Men i medisinen brukes uttrykket på en helt annen måte. <sup class="footnote-ref"><a href="#fn2" id="fnref2">[2]</a></sup><sup class="footnote-ref"><a href="#fn3" id="fnref3">[3]</a></sup></p><h3 id="Hva-er-det"><a class="anchor hidden-xs" href="#Hva-er-det" title="Hva-er-det"><i class="fa fa-link"></i></a>Hva er det?</h3><p>I den første lenken kan dere finne tallene på hvor mange som av henholdsvis vaksinasjons- og kontrollgruppen som har blitt smittet og utviklet sykdom. (Husk at smitte og sykdom er ikke det samme. Man kan være smittet av <em>SARS-CoV-2</em> uten å utvikle sykdommen, <em>Covid-19</em>)<br>
+Nå har de ikke offentliggjort tallene fra hver av gruppene, ennå. Men totalt har de hatt <code>46307</code> deltakere i denne studien. Av disse er blitt <code>972</code> syke, hvorav <code>77</code> fra den vaksinerte gruppen.</p><h3 id="Tallene"><a class="anchor hidden-xs" href="#Tallene" title="Tallene"><i class="fa fa-link"></i></a>Tallene</h3><p>La oss derfor bruke tallene fra den første delen av studiet, for perioden inntil to mnd etter vaksinasjon, som ble offentliggjort <sup class="footnote-ref"><a href="#fn4" id="fnref4">[4]</a></sup> før nyttår:<br>
+<code>43448</code> deltakere, hvorav <code>21720</code> fikk to doser med vaksinen og <code>21728</code> fikk saltvann (placebo).<br>
+Antall vaksinerte som ble syke: <code>8</code><br>
+Antall i placebogruppen som ble syke: <code>162</code></p><h3 id="Formelen"><a class="anchor hidden-xs" href="#Formelen" title="Formelen"><i class="fa fa-link"></i></a>Formelen</h3><p>Formelen for å regne ut «efficacy» er:<br>
+uvaksinert gruppes risiko minus vaksinert gruppes risiko, delt på uvaksinert gruppes risiko, ganget med hundre.</p><h3 id="For-hver-gruppe"><a class="anchor hidden-xs" href="#For-hver-gruppe" title="For-hver-gruppe"><i class="fa fa-link"></i></a>For hver gruppe</h3><p>Risikoen for hver gruppe:</p><p><small>Vaksinerte:<br>
+<span class="mathjax"><span class="MathJax_Preview" style="color: inherit;"></span><div class="MathJax_Display" style="text-align: center;"><span class="MathJax" id="MathJax-Element-1-Frame" tabindex="0" style="text-align: center; position: relative;" data-mathml="<math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot; display=&quot;block&quot;><mrow class=&quot;MJX-TeXAtom-ORD&quot;><mfrac><mn>8</mn><mn>21720</mn></mfrac></mrow><mo>&amp;#x00D7;</mo><mn>100</mn><mo>&amp;#x2248;</mo><mn>0</mn><mo>,</mo><mn>04</mn><mspace width=&quot;thickmathspace&quot; /><mi mathvariant=&quot;normal&quot;>&amp;#x0025;</mi></math>" role="presentation"><nobr aria-hidden="true"><span class="math" id="MathJax-Span-1" style="width: 11.867em; display: inline-block;"><span style="display: inline-block; position: relative; width: 9.948em; height: 0px; font-size: 119%;"><span style="position: absolute; clip: rect(0.82em, 1009.89em, 3.241em, -1000em); top: -2.348em; left: 0em;"><span class="mrow" id="MathJax-Span-2"><span class="texatom" id="MathJax-Span-3"><span class="mrow" id="MathJax-Span-4"><span class="mfrac" id="MathJax-Span-5"><span style="display: inline-block; position: relative; width: 2.62em; height: 0px; margin-right: 0.12em; margin-left: 0.12em;"><span style="position: absolute; clip: rect(3.165em, 1000.46em, 4.224em, -1000em); top: -4.693em; left: 50%; margin-left: -0.25em;"><span class="mn" id="MathJax-Span-6" style="font-family: MathJax_Main;">8</span><span style="display: inline-block; width: 0px; height: 4.016em;"></span></span><span style="position: absolute; clip: rect(3.155em, 1002.46em, 4.224em, -1000em); top: -3.33em; left: 50%; margin-left: -1.25em;"><span class="mn" id="MathJax-Span-7" style="font-family: MathJax_Main;">21720</span><span style="display: inline-block; width: 0px; height: 4.016em;"></span></span><span style="position: absolute; clip: rect(0.788em, 1002.62em, 1.236em, -1000em); top: -1.27em; left: 0em;"><span style="display: inline-block; overflow: hidden; vertical-align: 0em; border-top: 1.3px solid; width: 2.62em; height: 0px;"></span><span style="display: inline-block; width: 0px; height: 1.05em;"></span></span></span></span></span></span><span class="mo" id="MathJax-Span-8" style="font-family: MathJax_Main; padding-left: 0.222em;">×</span><span class="mn" id="MathJax-Span-9" style="font-family: MathJax_Main; padding-left: 0.222em;">100</span><span class="mo" id="MathJax-Span-10" style="font-family: MathJax_Main; padding-left: 0.278em;">≈</span><span class="mn" id="MathJax-Span-11" style="font-family: MathJax_Main; padding-left: 0.278em;">0</span><span class="mo" id="MathJax-Span-12" style="font-family: MathJax_Main;">,</span><span class="mn" id="MathJax-Span-13" style="font-family: MathJax_Main; padding-left: 0.167em;">04</span><span class="mspace" id="MathJax-Span-14" style="height: 0em; vertical-align: 0em; width: 0.278em; display: inline-block; overflow: hidden;"></span><span class="mi" id="MathJax-Span-15" style="font-family: MathJax_Main;">%</span></span><span style="display: inline-block; width: 0px; height: 2.348em;"></span></span></span><span style="display: inline-block; overflow: hidden; vertical-align: -0.916em; border-left: 0px solid; width: 0px; height: 2.587em;"></span></span></nobr><span class="MJX_Assistive_MathML MJX_Assistive_MathML_Block" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><mrow class="MJX-TeXAtom-ORD"><mfrac><mn>8</mn><mn>21720</mn></mfrac></mrow><mo>×</mo><mn>100</mn><mo>≈</mo><mn>0</mn><mo>,</mo><mn>04</mn><mspace width="thickmathspace"></mspace><mi mathvariant="normal">%</mi></math></span></span></div><script type="math/tex; mode=display" id="MathJax-Element-1">
+{8 \over 21720}\times 100 \approx 0,04 \;\%
+</script></span><br>
+Uvaksinerte:<br>
+<span class="mathjax"><span class="MathJax_Preview" style="color: inherit;"></span><div class="MathJax_Display" style="text-align: center;"><span class="MathJax" id="MathJax-Element-2-Frame" tabindex="0" style="text-align: center; position: relative;" data-mathml="<math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot; display=&quot;block&quot;><mrow class=&quot;MJX-TeXAtom-ORD&quot;><mfrac><mn>162</mn><mn>21728</mn></mfrac></mrow><mo>&amp;#x00D7;</mo><mn>100</mn><mo>&amp;#x2248;</mo><mn>0</mn><mo>,</mo><mn>75</mn><mspace width=&quot;thickmathspace&quot; /><mi mathvariant=&quot;normal&quot;>&amp;#x0025;</mi></math>" role="presentation"><nobr aria-hidden="true"><span class="math" id="MathJax-Span-16" style="width: 11.867em; display: inline-block;"><span style="display: inline-block; position: relative; width: 9.948em; height: 0px; font-size: 119%;"><span style="position: absolute; clip: rect(0.82em, 1009.89em, 3.241em, -1000em); top: -2.348em; left: 0em;"><span class="mrow" id="MathJax-Span-17"><span class="texatom" id="MathJax-Span-18"><span class="mrow" id="MathJax-Span-19"><span class="mfrac" id="MathJax-Span-20"><span style="display: inline-block; position: relative; width: 2.62em; height: 0px; margin-right: 0.12em; margin-left: 0.12em;"><span style="position: absolute; clip: rect(3.165em, 1001.45em, 4.224em, -1000em); top: -4.693em; left: 50%; margin-left: -0.75em;"><span class="mn" id="MathJax-Span-21" style="font-family: MathJax_Main;">162</span><span style="display: inline-block; width: 0px; height: 4.016em;"></span></span><span style="position: absolute; clip: rect(3.155em, 1002.46em, 4.224em, -1000em); top: -3.33em; left: 50%; margin-left: -1.25em;"><span class="mn" id="MathJax-Span-22" style="font-family: MathJax_Main;">21728</span><span style="display: inline-block; width: 0px; height: 4.016em;"></span></span><span style="position: absolute; clip: rect(0.788em, 1002.62em, 1.236em, -1000em); top: -1.27em; left: 0em;"><span style="display: inline-block; overflow: hidden; vertical-align: 0em; border-top: 1.3px solid; width: 2.62em; height: 0px;"></span><span style="display: inline-block; width: 0px; height: 1.05em;"></span></span></span></span></span></span><span class="mo" id="MathJax-Span-23" style="font-family: MathJax_Main; padding-left: 0.222em;">×</span><span class="mn" id="MathJax-Span-24" style="font-family: MathJax_Main; padding-left: 0.222em;">100</span><span class="mo" id="MathJax-Span-25" style="font-family: MathJax_Main; padding-left: 0.278em;">≈</span><span class="mn" id="MathJax-Span-26" style="font-family: MathJax_Main; padding-left: 0.278em;">0</span><span class="mo" id="MathJax-Span-27" style="font-family: MathJax_Main;">,</span><span class="mn" id="MathJax-Span-28" style="font-family: MathJax_Main; padding-left: 0.167em;">75</span><span class="mspace" id="MathJax-Span-29" style="height: 0em; vertical-align: 0em; width: 0.278em; display: inline-block; overflow: hidden;"></span><span class="mi" id="MathJax-Span-30" style="font-family: MathJax_Main;">%</span></span><span style="display: inline-block; width: 0px; height: 2.348em;"></span></span></span><span style="display: inline-block; overflow: hidden; vertical-align: -0.916em; border-left: 0px solid; width: 0px; height: 2.587em;"></span></span></nobr><span class="MJX_Assistive_MathML MJX_Assistive_MathML_Block" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><mrow class="MJX-TeXAtom-ORD"><mfrac><mn>162</mn><mn>21728</mn></mfrac></mrow><mo>×</mo><mn>100</mn><mo>≈</mo><mn>0</mn><mo>,</mo><mn>75</mn><mspace width="thickmathspace"></mspace><mi mathvariant="normal">%</mi></math></span></span></div><script type="math/tex; mode=display" id="MathJax-Element-2">
+{162 \over 21728}\times 100 \approx 0,75 \;\%
+</script></span><br>
+</small></p><h3 id="Utregnet"><a class="anchor hidden-xs" href="#Utregnet" title="Utregnet"><i class="fa fa-link"></i></a>Utregnet</h3><small>
+Regnet ut blir efficacy:
+</small><p><small><span class="mathjax"><span class="MathJax_Preview" style="color: inherit;"></span><div class="MathJax_Display" style="text-align: center;"><span class="MathJax" id="MathJax-Element-3-Frame" tabindex="0" style="text-align: center; position: relative;" data-mathml="<math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot; display=&quot;block&quot;><mfrac><mrow><mn>0</mn><mo>,</mo><mn>75</mn><mo>&amp;#x2212;</mo><mn>0</mn><mo>,</mo><mn>04</mn></mrow><mrow><mn>0</mn><mo>,</mo><mn>75</mn></mrow></mfrac><mo>&amp;#x00D7;</mo><mn>100</mn><mo>&amp;#x2248;</mo><mn>95</mn><mspace width=&quot;thickmathspace&quot; /><mi mathvariant=&quot;normal&quot;>&amp;#x0025;</mi></math>" role="presentation"><nobr aria-hidden="true"><span class="math" id="MathJax-Span-31" style="width: 13.844em; display: inline-block;"><span style="display: inline-block; position: relative; width: 11.616em; height: 0px; font-size: 119%;"><span style="position: absolute; clip: rect(0.797em, 1011.56em, 3.413em, -1000em); top: -2.348em; left: 0em;"><span class="mrow" id="MathJax-Span-32"><span class="mfrac" id="MathJax-Span-33"><span style="display: inline-block; position: relative; width: 5.232em; height: 0px; margin-right: 0.12em; margin-left: 0.12em;"><span style="position: absolute; clip: rect(3.154em, 1005.08em, 4.396em, -1000em); top: -4.705em; left: 50%; margin-left: -2.556em;"><span class="mrow" id="MathJax-Span-34"><span class="mn" id="MathJax-Span-35" style="font-family: MathJax_Main;">0</span><span class="mo" id="MathJax-Span-36" style="font-family: MathJax_Main;">,</span><span class="mn" id="MathJax-Span-37" style="font-family: MathJax_Main; padding-left: 0.167em;">75</span><span class="mo" id="MathJax-Span-38" style="font-family: MathJax_Main; padding-left: 0.222em;">−</span><span class="mn" id="MathJax-Span-39" style="font-family: MathJax_Main; padding-left: 0.222em;">0</span><span class="mo" id="MathJax-Span-40" style="font-family: MathJax_Main;">,</span><span class="mn" id="MathJax-Span-41" style="font-family: MathJax_Main; padding-left: 0.167em;">04</span></span><span style="display: inline-block; width: 0px; height: 4.016em;"></span></span><span style="position: absolute; clip: rect(3.155em, 1001.89em, 4.396em, -1000em); top: -3.33em; left: 50%; margin-left: -0.973em;"><span class="mrow" id="MathJax-Span-42"><span class="mn" id="MathJax-Span-43" style="font-family: MathJax_Main;">0</span><span class="mo" id="MathJax-Span-44" style="font-family: MathJax_Main;">,</span><span class="mn" id="MathJax-Span-45" style="font-family: MathJax_Main; padding-left: 0.167em;">75</span></span><span style="display: inline-block; width: 0px; height: 4.016em;"></span></span><span style="position: absolute; clip: rect(0.788em, 1005.23em, 1.236em, -1000em); top: -1.27em; left: 0em;"><span style="display: inline-block; overflow: hidden; vertical-align: 0em; border-top: 1.3px solid; width: 5.232em; height: 0px;"></span><span style="display: inline-block; width: 0px; height: 1.05em;"></span></span></span></span><span class="mo" id="MathJax-Span-46" style="font-family: MathJax_Main; padding-left: 0.222em;">×</span><span class="mn" id="MathJax-Span-47" style="font-family: MathJax_Main; padding-left: 0.222em;">100</span><span class="mo" id="MathJax-Span-48" style="font-family: MathJax_Main; padding-left: 0.278em;">≈</span><span class="mn" id="MathJax-Span-49" style="font-family: MathJax_Main; padding-left: 0.278em;">95</span><span class="mspace" id="MathJax-Span-50" style="height: 0em; vertical-align: 0em; width: 0.278em; display: inline-block; overflow: hidden;"></span><span class="mi" id="MathJax-Span-51" style="font-family: MathJax_Main;">%</span></span><span style="display: inline-block; width: 0px; height: 2.348em;"></span></span></span><span style="display: inline-block; overflow: hidden; vertical-align: -1.121em; border-left: 0px solid; width: 0px; height: 2.819em;"></span></span></nobr><span class="MJX_Assistive_MathML MJX_Assistive_MathML_Block" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><mfrac><mrow><mn>0</mn><mo>,</mo><mn>75</mn><mo>−</mo><mn>0</mn><mo>,</mo><mn>04</mn></mrow><mrow><mn>0</mn><mo>,</mo><mn>75</mn></mrow></mfrac><mo>×</mo><mn>100</mn><mo>≈</mo><mn>95</mn><mspace width="thickmathspace"></mspace><mi mathvariant="normal">%</mi></math></span></span></div><script type="math/tex; mode=display" id="MathJax-Element-3">
+\frac{0,75 - 0,04}{0,75}\times 100 \approx 95 \;\%
+</script></span><br>
+</small></p><p>I første del av studiet er beregnet sjanse for å bli syk <code>0,04</code> prosent med vaksinen, og uten er sjansen <code>0,75</code> prosent.<br>
+Tallene er høyere etter seks mnd. Anslagsvis, henholdsvis ca. <code>0,08</code> og <code>3,8</code> prosent.</p><p>Om du så blir smittet, og du så blir syk, er sjansen for å død mindre enn dette igjen. (I studiet døde fire i placebogruppen og to i vaksinegruppen. Sannsynligvis av andre årsaker)</p><h3 id="Sjansen-for-å-dø"><a class="anchor hidden-xs" href="#Sjansen-for-å-dø" title="Sjansen-for-å-dø"><i class="fa fa-link"></i></a>Sjansen for å dø</h3><p>I Norge har, hittil (16. april) <code>106223</code> mennesker blitt testet positive for SARS-CoV-2<sup class="footnote-ref"><a href="#fn5" id="fnref5">[5]</a></sup>. Og <code>708</code> er meldt døde. Risikoen for å dø er altså <code>0,67</code> prosent, etter disse tallene.</p><p>Men hvor mange er egentlig; totalt smittet? I følge samme FHI<sup class="footnote-ref"><a href="#fn6" id="fnref6">[6]</a></sup>, har mer enn<code>3,2</code> prosent av befolkningen hatt viruset. Tallene er fra januar. Da var omlag 600 døde.<br>
+<code>3,2</code> prosent av befolkningen på 5,4 mill er minst <code>170000</code>.<br>
+Med disse tallene er risikoen maksimum <code>0,35</code> prosent.<br>
+Dette under forutsetningen om at alle de <code>708</code> som er meldt døde med viruset, døde av viruset. FHI sier også at de ikke kan skille mellom død med viruset, og død <ins>av</ins> viruset. FHI sier også at ni av ti døde hadde kjente kroniske sykdommer<sup class="footnote-ref"><a href="#fn7" id="fnref7">[7]</a></sup></p><h3 id="Alderenrisiko"><a class="anchor hidden-xs" href="#Alderenrisiko" title="Alderenrisiko"><i class="fa fa-link"></i></a>Alderen/risiko</h3><p>Gjennomsnittsalderen for døde er pr. dags dato<sup class="footnote-ref"><a href="#fn8" id="fnref8">[8]</a></sup> 81 år (medianalderen er 83 år). Hvilket tilsvarer omtrent forventet levealder – uansett. Statistisk er det altså ingen forskjell…?</p><p>Videre vet vi at sykehusinnleggelsene øker eksponentielt med alderen<sup class="footnote-ref"><a href="#fn9" id="fnref9">[9]</a></sup>. Det samme gjelder risikoen for å dø av covid-19<sup class="footnote-ref"><a href="#fn10" id="fnref10">[10]</a></sup><sup class="footnote-ref"><a href="#fn11" id="fnref11">[11]</a></sup></p><p>Hvor stor risiko har friske, unge mennesker til å bli syk og dø…?</p><h2 id="Risikoen-ved-vaksinene"><a class="anchor hidden-xs" href="#Risikoen-ved-vaksinene" title="Risikoen-ved-vaksinene"><i class="fa fa-link"></i></a>Risikoen ved vaksinene</h2><p>Hva så med risikoene ved vaksinene?<br>
+Vi har hørt om AstraZeneca-vaksinen, som kan gi blodpropp. Men visste du at risikoen for å få blodpropp av Pfizers vaksine er omtrent den samme?<sup class="footnote-ref"><a href="#fn12" id="fnref12">[12]</a></sup> 0,0004 % for Pfizers og 0,0005 % for AstraZenecas. Bivirkningene er òg mange.<sup class="footnote-ref"><a href="#fn13" id="fnref13">[13]</a></sup> Minst 6 personer under 60 år har dødd av vaksiner i Norge.<br>
+Vaksinen skal jo beskytte de mest sårbare. Men om man har redusert immunforsvar, kan man faktisk være mer utsatt.<sup class="footnote-ref"><a href="#fn14" id="fnref14">[14]</a></sup></p><p>FHI har også tall<sup class="footnote-ref"><a href="#fn15" id="fnref15">[15]</a></sup> på hvor mange som blir utsatt for blødninger etter vaksinen.<br>
+Ikke noe jeg vil ha!</p><h3 id="Levetid-på-immunitetbeskyttelse"><a class="anchor hidden-xs" href="#Levetid-på-immunitetbeskyttelse" title="Levetid-på-immunitetbeskyttelse"><i class="fa fa-link"></i></a>Levetid på immunitet/beskyttelse</h3><p>Ingen vet ennå hvor lenge <sup class="footnote-ref"><a href="#fn16" id="fnref16">[16]</a></sup> vaksinasjonen vil gi beskyttelse. Vi vet heller ikke så mye om i hvilken grad man får beskyttelse mot alle disse forskjellige mutasjonene. <sup class="footnote-ref"><a href="#fn17" id="fnref17">[17]</a></sup></p><h1 id="Alternativ-til-vaksiner"><a class="anchor hidden-xs" href="#Alternativ-til-vaksiner" title="Alternativ-til-vaksiner"><i class="fa fa-link"></i></a>Alternativ til vaksiner?</h1><p>Finnes det andre alternativer enn vaksiner?</p><h2 id="Styrk-immunforsvaret"><a class="anchor hidden-xs" href="#Styrk-immunforsvaret" title="Styrk-immunforsvaret"><i class="fa fa-link"></i></a>Styrk immunforsvaret</h2><p>Styrk immunforsvaret med C-<sup class="footnote-ref"><a href="#fn18" id="fnref18">[18]</a></sup> og D-vitamin<sup class="footnote-ref"><a href="#fn19" id="fnref19">[19]</a></sup>, sink<sup class="footnote-ref"><a href="#fn20" id="fnref20">[20]</a></sup>, selen<sup class="footnote-ref"><a href="#fn21" id="fnref21">[21]</a></sup><sup class="footnote-ref"><a href="#fn22" id="fnref22">[22]</a></sup>, og eller sunt kosthold. D-vitamin er nyttig til mer enn å forhindre engelsk syke (rakitt), slik norske helsemyndigheter ser ut til å mene.<sup class="footnote-ref"><a href="#fn23" id="fnref23">[23]</a></sup><br>
+Nivået av D-vitamin er kanskje den største indikator på alvorlighetsgrad/overlevelse…<br>
+<sup class="footnote-ref"><a href="#fn24" id="fnref24">[24]</a></sup><sup class="footnote-ref"><a href="#fn25" id="fnref25">[25]</a></sup></p><h2 id="IKKE-godkjent"><a class="anchor hidden-xs" href="#IKKE-godkjent" title="IKKE-godkjent"><i class="fa fa-link"></i></a>IKKE godkjent</h2><p>Men det finnes faktisk ett generisk medikament, som både gir beskyttelse mot virusinfeksjon, hjelper deg om du blir syk, og som kan kurere deg for «post-COVID syndrome» (AKA «long haulers»).<sup class="footnote-ref"><a href="#fn26" id="fnref26">[26]</a></sup><br>
+Dette medikamentet kalles Ivermectin.<br>
+Og det finnes mange studier, som viser dens virkning. Her en oversikt over alle disse studiene <sup class="footnote-ref"><a href="#fn27" id="fnref27">[27]</a></sup></p><h3 id="Frarådes"><a class="anchor hidden-xs" href="#Frarådes" title="Frarådes"><i class="fa fa-link"></i></a>Frarådes</h3><p>Men «helsemyndighetene» (skriver det i hermetegn med vilje) i Norge<sup class="footnote-ref"><a href="#fn28" id="fnref28">[28]</a></sup>, Europa<sup class="footnote-ref"><a href="#fn29" id="fnref29">[29]</a></sup> og USA<sup class="footnote-ref"><a href="#fn30" id="fnref30">[30]</a></sup> vil selvsagt ikke godkjenne det! Derfra klages det over at studiene er småe og svake, men disse vil selvsagt ikke være med på å finansiere disse – manglende – større studiene.</p><p>(Slik er skolemedisinen blitt, patenterte medikamenter, det legemiddelfirmaene kan tjene masse penger på, får både oppmerksomhet, midler og – ikke minst – godkjenning.)</p><p>I-MASK+ protokollen, <sup class="footnote-ref"><a href="#fn31" id="fnref31">[31]</a></sup><sup class="footnote-ref"><a href="#fn32" id="fnref32">[32]</a></sup> som nå brukes rundt om i hele verden, er ikke godkjent i Norge. Den er basert på sunne prinsipper, som vitaminer, mineraler og Ivermectin, m.m.<br>
+Bak denne protokollen står – ved siden av mange andre fremragende medisinske forskere – også den norske legen <em>Eivind H. Vinjevoll</em>, fra Volda Sjukehus.<br>
+De som husker ett år tilbake, minnes at hans praksis med å helbrede pasienter, som ellers mest sannsynlig ville ha dødd, ble forsøkt stoppet av myndighetene. Han gjorde den store «synden» å bruke et upatenterbart preparat: C-vitamin<sup class="footnote-ref"><a href="#fn33" id="fnref33">[33]</a></sup><sup class="footnote-ref"><a href="#fn34" id="fnref34">[34]</a></sup><sup class="footnote-ref"><a href="#fn35" id="fnref35">[35]</a></sup></p><h2 id="Munnbindspriting"><a class="anchor hidden-xs" href="#Munnbindspriting" title="Munnbindspriting"><i class="fa fa-link"></i></a>Munnbind/spriting</h2><p>Mye rart er skrevet for og i mot munnbind – og ikke minst påbud om dette, så jeg skal bare i korte trekk si dette:</p><h3 id="Forskningen-munnbind-og-slikt…"><a class="anchor hidden-xs" href="#Forskningen-munnbind-og-slikt…" title="Forskningen-munnbind-og-slikt…"><i class="fa fa-link"></i></a>Forskningen, munnbind og slikt…</h3><p>Forskningen og anbefalingen for munnbind er òg basert på «efficacy».<sup class="footnote-ref"><a href="#fn36" id="fnref36">[36]</a></sup><br>
+De fleste studier er «non-conclusive». Det er vanskelig å studere «in real life» hvor mye effekt disse har.</p><p>Munnbind hindrer ikke smitte. Men det <em>reduserer</em> mengden med smittestoff en smittet person klarer å spre.</p><h3 id="Frivillighet"><a class="anchor hidden-xs" href="#Frivillighet" title="Frivillighet"><i class="fa fa-link"></i></a>Frivillighet</h3><p>Kun ett land i verden har klart å utrydde viruset: Taiwan.<sup class="footnote-ref"><a href="#fn37" id="fnref37">[37]</a></sup><br>
+På øyen begynte de. før det ble en pandemi – <ins>frivillig</ins> – å bruke munnbind.</p><p>Frivillighet <ins>fungerer!</ins></p><p>Tvang, forbud og påbud, virker ikke overfor frie mennesker. Tvert imot, vil mange flere; gjøre det motsatte, bare fordi de ikke er enig med <em>hvem</em> det er som utsteder dekretet. Og – selvsagt også – fordi de vil ha seg frabedt å bli behandlet som barn!</p><h3 id="Forskningen-og-overflatesmitte"><a class="anchor hidden-xs" href="#Forskningen-og-overflatesmitte" title="Forskningen-og-overflatesmitte"><i class="fa fa-link"></i></a>Forskningen og overflatesmitte</h3><p>Ja det skader nok ikke være renslig, å vaske/sprite hendene, etc – så lenge man gjør det med måte…</p><p>Men bevisene mangler for at dette viruset smitter via kontaktflater – slikt som det er påstått.<br>
+Tvert imot. Nå mer enn ett år etter kommer innrømmelsen fra det amerikanske CDC<sup class="footnote-ref"><a href="#fn38" id="fnref38">[38]</a></sup><sup class="footnote-ref"><a href="#fn39" id="fnref39">[39]</a></sup> om at vi har blitt lurt!</p><p>Vi har spritet oss, mest som et rituale!!!</p><p>CDC, sier nå at sjansen for å bli smittet via en kontaminert overflater er mindre enn <code>1</code> til <code>10000</code>. Og de færreste overflater <em>er</em> kontaminert!</p><h3 id="Pandoras-eske-er-åpnet"><a class="anchor hidden-xs" href="#Pandoras-eske-er-åpnet" title="Pandoras-eske-er-åpnet"><i class="fa fa-link"></i></a>Pandoras eske er åpnet</h3><p>Det beste unge friske mennesker kan gjøre er å leve livet sitt på en mest mulig vanlig måte. Viruset er kommet for å bli. Pandoras kiste er åpnet, den kan ikke lukkes igjen! Vi må bare la viruset brenne gjennom landskapet. Da oppnås flokkimmunitet raskest. Og da vil de utsatte i samfunnet også best beskyttes!</p><p>Om du er ung, ikke har noen, alvorlige komorbiditeter, er sjansen for å bli syk og dø av viruset, nesten ikke til stede.<br>
+Om du vil ta vaksinen, er sjansen stor for at du får alvorlige bivirkninger.</p><p>Nå sier tilmed FHI at sjansen for å dø av (AstraZenecas) vaksinen er større enn risikoken for å dø av viruset!!!<sup class="footnote-ref"><a href="#fn40" id="fnref40">[40]</a></sup></p><h3 id="Økonomien-og-idiotien"><a class="anchor hidden-xs" href="#Økonomien-og-idiotien" title="Økonomien-og-idiotien"><i class="fa fa-link"></i></a>Økonomien og idiotien</h3><p>Idiotien med «lockdowns» har mange skrevet mye om, vil bare nevne at det eneste landet som har overvunnet viruset, ikke har hatt noen nedstenging. Og at andre land/områder der som har hatt og ikke har hatt nedstengning, er forskjellene ikke mulig å måle.</p><h3 id="Meg-selv"><a class="anchor hidden-xs" href="#Meg-selv" title="Meg-selv"><i class="fa fa-link"></i></a>Meg selv</h3><p>Selv er jeg i den såkalte <em>risikogruppen</em>, med KOLS og andre utfordringer…<br>
+Jeg setter pris på at du ikke puster meg opp i fjeset, og at du bruker munnbind når du går på butikken, eller er tett på folk du ikke kjenner.</p><p>Men ellers må du bare slappe av. Prøv å få andre til å slappe av òg. For stress, er heller ikke bra for immunhelsen. <img class="emoji" alt=":smirk:" src="https://cdnjs.cloudflare.com/ajax/libs/emojify.js/1.1.0/images/basic/smirk.png"></p><hr><style>
+.copyleft {
+  display:inline-block;
+  transform: rotate(180deg);
+}
+</style><p><small><em>Copyleft <span class="copyleft">©</span> 2021 – Jostein Hove-Henriksen<br>
+(CC BY-SA 4.0)</em></small><br>
+<img src="https://hove-henriksen.it//hedgedoc/uploads/upload_476de4fd16fc8f36083ae769346a0a6f.png" alt=""></p><hr class="footnotes-sep"><section class="footnotes">
+<ol class="footnotes-list">
+<li id="fn1" class="footnote-item"><p><a href="https://www.businesswire.com/news/home/20210401005365/en/" target="_blank" rel="noopener">https://www.businesswire.com/news/home/20210401005365/en/</a> <a href="#fnref1" class="footnote-backref">↩︎</a></p>
+</li>
+<li id="fn2" class="footnote-item"><p><a href="https://youtu.be/ZRYZGWDp5Ag" target="_blank" rel="noopener">https://youtu.be/ZRYZGWDp5Ag</a> <a href="#fnref2" class="footnote-backref">↩︎</a></p>
+</li>
+<li id="fn3" class="footnote-item"><p><a href="https://www.nytimes.com/2020/12/13/learning/what-does-95-effective-mean-teaching-the-math-of-vaccine-efficacy.html" target="_blank" rel="noopener">https://www.nytimes.com/2020/12/13/learning/what-does-95-effective-mean-teaching-the-math-of-vaccine-efficacy.html</a> <a href="#fnref3" class="footnote-backref">↩︎</a></p>
+</li>
+<li id="fn4" class="footnote-item"><p><a href="https://doi.org/10.1136/bmj.m4826" target="_blank" rel="noopener">https://doi.org/10.1136/bmj.m4826</a> <a href="#fnref4" class="footnote-backref">↩︎</a></p>
+</li>
+<li id="fn5" class="footnote-item"><p><a href="https://www.fhi.no/sv/smittsomme-sykdommer/corona/dags--og-ukerapporter/dags--og-ukerapporter-om-koronavirus/" target="_blank" rel="noopener">https://www.fhi.no/sv/smittsomme-sykdommer/corona/dags--og-ukerapporter/dags--og-ukerapporter-om-koronavirus/</a> <a href="#fnref5" class="footnote-backref">↩︎</a></p>
+</li>
+<li id="fn6" class="footnote-item"><p><a href="https://www.fhi.no/publ/2021/seroprevalence-of-sars-cov-2-in-the-norwegian-population/" target="_blank" rel="noopener">https://www.fhi.no/publ/2021/seroprevalence-of-sars-cov-2-in-the-norwegian-population/</a> <a href="#fnref6" class="footnote-backref">↩︎</a></p>
+</li>
+<li id="fn7" class="footnote-item"><p><a href="https://www.fhi.no/nyheter/2020/ni-av-ti-som-dode-med-covid-19-hadde-kronisk-sykdom/" target="_blank" rel="noopener">https://www.fhi.no/nyheter/2020/ni-av-ti-som-dode-med-covid-19-hadde-kronisk-sykdom/</a> <a href="#fnref7" class="footnote-backref">↩︎</a></p>
+</li>
+<li id="fn8" class="footnote-item"><p><a href="https://www.fhi.no/contentassets/8a971e7b0a3c4a06bdbf381ab52e6157/vedlegg/2021/ukerapport-uke-14-05.04---11.04.21.pdf" target="_blank" rel="noopener">https://www.fhi.no/contentassets/8a971e7b0a3c4a06bdbf381ab52e6157/vedlegg/2021/ukerapport-uke-14-05.04---11.04.21.pdf</a><br>
+(side 36) <a href="#fnref8" class="footnote-backref">↩︎</a></p>
+</li>
+<li id="fn9" class="footnote-item"><p><a href="https://royalsocietypublishing.org/doi/10.1098/rsif.2020.0982" target="_blank" rel="noopener">https://royalsocietypublishing.org/doi/10.1098/rsif.2020.0982</a> <a href="#fnref9" class="footnote-backref">↩︎</a></p>
+</li>
+<li id="fn10" class="footnote-item"><p><a href="https://onlinelibrary.wiley.com/doi/10.1111/acel.13230" target="_blank" rel="noopener">https://onlinelibrary.wiley.com/doi/10.1111/acel.13230</a> <a href="#fnref10" class="footnote-backref">↩︎</a></p>
+</li>
+<li id="fn11" class="footnote-item"><p><a href="https://www.nature.com/articles/s41586-020-2918-0" target="_blank" rel="noopener">https://www.nature.com/articles/s41586-020-2918-0</a> <a href="#fnref11" class="footnote-backref">↩︎</a></p>
+</li>
+<li id="fn12" class="footnote-item"><p><a href="https://osf.io/a9jdq/" target="_blank" rel="noopener">https://osf.io/a9jdq/</a> <a href="#fnref12" class="footnote-backref">↩︎</a></p>
+</li>
+<li id="fn13" class="footnote-item"><p><a href="https://legemiddelverket.no/godkjenning/koronavaksiner/meldte-mistenkte-bivirkninger-av-koronavaksiner" target="_blank" rel="noopener">https://legemiddelverket.no/godkjenning/koronavaksiner/meldte-mistenkte-bivirkninger-av-koronavaksiner</a> <a href="#fnref13" class="footnote-backref">↩︎</a></p>
+</li>
+<li id="fn14" class="footnote-item"><p><a href="https://www.medpagetoday.com/infectiousdisease/covid19vaccine/92106" target="_blank" rel="noopener">https://www.medpagetoday.com/infectiousdisease/covid19vaccine/92106</a> <a href="#fnref14" class="footnote-backref">↩︎</a></p>
+</li>
+<li id="fn15" class="footnote-item"><p><a href="https://www.fhi.no/nyheter/2021/blodninger-etter-covid-19-vaksiner/" target="_blank" rel="noopener">https://www.fhi.no/nyheter/2021/blodninger-etter-covid-19-vaksiner/</a> <a href="#fnref15" class="footnote-backref">↩︎</a></p>
+</li>
+<li id="fn16" class="footnote-item"><p><a href="https://www.nrk.no/norge/fhi_-_-det-er-mulig-vi-ma-gi-en-tredje-vaksinedose-1.15331865" target="_blank" rel="noopener">https://www.nrk.no/norge/fhi_-_-det-er-mulig-vi-ma-gi-en-tredje-vaksinedose-1.15331865</a> <a href="#fnref16" class="footnote-backref">↩︎</a></p>
+</li>
+<li id="fn17" class="footnote-item"><p><a href="https://www.nettavisen.no/nyheter/studie-pfizer-vaksinen-mindre-effektiv-mot-sorafrikansk-mutasjon/s/12-95-3424113148" target="_blank" rel="noopener">https://www.nettavisen.no/nyheter/studie-pfizer-vaksinen-mindre-effektiv-mot-sorafrikansk-mutasjon/s/12-95-3424113148</a> <a href="#fnref17" class="footnote-backref">↩︎</a></p>
+</li>
+<li id="fn18" class="footnote-item"><p><a href="https://c19vitaminc.com/" target="_blank" rel="noopener">https://c19vitaminc.com/</a> <a href="#fnref18" class="footnote-backref">↩︎</a></p>
+</li>
+<li id="fn19" class="footnote-item"><p><a href="https://c19vitamind.com/" target="_blank" rel="noopener">https://c19vitamind.com/</a> <a href="#fnref19" class="footnote-backref">↩︎</a></p>
+</li>
+<li id="fn20" class="footnote-item"><p><a href="https://c19zinc.com/" target="_blank" rel="noopener">https://c19zinc.com/</a> <a href="#fnref20" class="footnote-backref">↩︎</a></p>
+</li>
+<li id="fn21" class="footnote-item"><p><a href="https://www.researchgate.net/publication/341061552_Selenium_and_RNA_virus_interactions_Potential_implications_for_SARS-CoV-2_infection_COVID-19" target="_blank" rel="noopener">https://www.researchgate.net/publication/341061552_Selenium_and_RNA_virus_interactions_Potential_implications_for_SARS-CoV-2_infection_COVID-19</a> <a href="#fnref21" class="footnote-backref">↩︎</a></p>
+</li>
+<li id="fn22" class="footnote-item"><p><a href="https://www.cambridge.org/core/journals/british-journal-of-nutrition/article/finlands-handling-of-selenium-is-a-model-in-these-times-of-coronavirus-infections/BE3CE5E68CAEE12406F92997A39BC02D" target="_blank" rel="noopener">https://www.cambridge.org/core/journals/british-journal-of-nutrition/article/finlands-handling-of-selenium-is-a-model-in-these-times-of-coronavirus-infections/BE3CE5E68CAEE12406F92997A39BC02D</a> <a href="#fnref22" class="footnote-backref">↩︎</a></p>
+</li>
+<li id="fn23" class="footnote-item"><p><a href="https://www.fhi.no/nettpub/hin/levevaner/kosthald/" target="_blank" rel="noopener">https://www.fhi.no/nettpub/hin/levevaner/kosthald/</a> <a href="#fnref23" class="footnote-backref">↩︎</a></p>
+</li>
+<li id="fn24" class="footnote-item"><p><a href="https://www.medrxiv.org/content/10.1101/2020.09.04.20188268v1.full-text" target="_blank" rel="noopener">https://www.medrxiv.org/content/10.1101/2020.09.04.20188268v1.full-text</a> <a href="#fnref24" class="footnote-backref">↩︎</a></p>
+</li>
+<li id="fn25" class="footnote-item"><p><a href="https://febs.onlinelibrary.wiley.com/doi/10.1111/febs.15495" target="_blank" rel="noopener">https://febs.onlinelibrary.wiley.com/doi/10.1111/febs.15495</a> <a href="#fnref25" class="footnote-backref">↩︎</a></p>
+</li>
+<li id="fn26" class="footnote-item"><p><a href="https://doi.org/10.31546/2633-8653.1008" target="_blank" rel="noopener">https://doi.org/10.31546/2633-8653.1008</a> <a href="#fnref26" class="footnote-backref">↩︎</a></p>
+</li>
+<li id="fn27" class="footnote-item"><p><a href="https://ivmmeta.com/" target="_blank" rel="noopener">https://ivmmeta.com/</a> <a href="#fnref27" class="footnote-backref">↩︎</a></p>
+</li>
+<li id="fn28" class="footnote-item"><p><a href="https://legemiddelverket.no/nyheter/legemiddelverket-frarader-bruk-av-ivermektin-til-forebygging-og-behandling-av-covid-19" target="_blank" rel="noopener">https://legemiddelverket.no/nyheter/legemiddelverket-frarader-bruk-av-ivermektin-til-forebygging-og-behandling-av-covid-19</a> <a href="#fnref28" class="footnote-backref">↩︎</a></p>
+</li>
+<li id="fn29" class="footnote-item"><p><a href="https://www.ema.europa.eu/en/news/ema-advises-against-use-ivermectin-prevention-treatment-covid-19-outside-randomised-clinical-trials" target="_blank" rel="noopener">https://www.ema.europa.eu/en/news/ema-advises-against-use-ivermectin-prevention-treatment-covid-19-outside-randomised-clinical-trials</a> <a href="#fnref29" class="footnote-backref">↩︎</a></p>
+</li>
+<li id="fn30" class="footnote-item"><p><a href="https://www.fda.gov/consumers/consumer-updates/why-you-should-not-use-ivermectin-treat-or-prevent-covid-19" target="_blank" rel="noopener">https://www.fda.gov/consumers/consumer-updates/why-you-should-not-use-ivermectin-treat-or-prevent-covid-19</a> <a href="#fnref30" class="footnote-backref">↩︎</a></p>
+</li>
+<li id="fn31" class="footnote-item"><p><a href="https://covid19criticalcare.com/covid-19-protocols/i-mask-plus-protocol/" target="_blank" rel="noopener">https://covid19criticalcare.com/covid-19-protocols/i-mask-plus-protocol/</a> <a href="#fnref31" class="footnote-backref">↩︎</a></p>
+</li>
+<li id="fn32" class="footnote-item"><p><a href="https://www.tv2.no/a/11975167/" target="_blank" rel="noopener">https://www.tv2.no/a/11975167/</a> <a href="#fnref32" class="footnote-backref">↩︎</a></p>
+</li>
+<li id="fn33" class="footnote-item"><p><a href="https://www.tv2.no/a/11105063" target="_blank" rel="noopener">https://www.tv2.no/a/11105063</a> <a href="#fnref33" class="footnote-backref">↩︎</a></p>
+</li>
+<li id="fn34" class="footnote-item"><p><a href="https://www.tv2.no/a/11142198/" target="_blank" rel="noopener">https://www.tv2.no/a/11142198/</a> <a href="#fnref34" class="footnote-backref">↩︎</a></p>
+</li>
+<li id="fn35" class="footnote-item"><p><a href="https://caluna.no/siste/skepsis-mot-vitamin-c-overlege-jeg-ante-ikke-at-motstanden-var-sa-sterk/" target="_blank" rel="noopener">https://caluna.no/siste/skepsis-mot-vitamin-c-overlege-jeg-ante-ikke-at-motstanden-var-sa-sterk/</a> <a href="#fnref35" class="footnote-backref">↩︎</a></p>
+</li>
+<li id="fn36" class="footnote-item"><p><a href="https://doi.org/10.1016/j.ijnurstu.2020.103629" target="_blank" rel="noopener">https://doi.org/10.1016/j.ijnurstu.2020.103629</a> <a href="#fnref36" class="footnote-backref">↩︎</a></p>
+</li>
+<li id="fn37" class="footnote-item"><p><a href="https://pubmed.ncbi.nlm.nih.gov/33821922/" target="_blank" rel="noopener">https://pubmed.ncbi.nlm.nih.gov/33821922/</a> <a href="#fnref37" class="footnote-backref">↩︎</a></p>
+</li>
+<li id="fn38" class="footnote-item"><p><a href="https://nypost.com/2021/04/05/low-risk-of-catching-covid-from-surfaces-new-cdc-guidelines/" target="_blank" rel="noopener">https://nypost.com/2021/04/05/low-risk-of-catching-covid-from-surfaces-new-cdc-guidelines/</a> <a href="#fnref38" class="footnote-backref">↩︎</a></p>
+</li>
+<li id="fn39" class="footnote-item"><p><a href="https://www.cdc.gov/coronavirus/2019-ncov/more/science-and-research/surface-transmission.html" target="_blank" rel="noopener">https://www.cdc.gov/coronavirus/2019-ncov/more/science-and-research/surface-transmission.html</a> <a href="#fnref39" class="footnote-backref">↩︎</a></p>
+</li>
+<li id="fn40" class="footnote-item"><p><a href="https://www.fhi.no/nyheter/2021/astrazeneca-vaksinen-tas-ut-av-koronavaksinasjonsprogrammet-i-norge/" target="_blank" rel="noopener">https://www.fhi.no/nyheter/2021/astrazeneca-vaksinen-tas-ut-av-koronavaksinasjonsprogrammet-i-norge/</a> <a href="#fnref40" class="footnote-backref">↩︎</a></p>
+</li>
+</ol>
+</section></div>
+    <div class="ui-toc dropup unselectable hidden-print" style="display:none;">
+        <div class="pull-right dropdown">
+            <a id="tocLabel" class="ui-toc-label btn btn-default" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false" title="Table of content">
+                <i class="fa fa-bars"></i>
+            </a>
+            <ul id="ui-toc" class="ui-toc-dropdown dropdown-menu" aria-labelledby="tocLabel">
+                <div class="toc"><ul class="nav">
+<li class=""><a href="#Tanker-og-tall-om-Covid-19" title="Tanker og tall om Covid-19">Tanker og tall om Covid-19</a><ul class="nav">
+<li><a href="#Gledelig-nyhet-fra-Pfizer" title="Gledelig nyhet fra Pfizer?">Gledelig nyhet fra Pfizer?</a><ul class="nav">
+<li><a href="#«Efficacy»" title="«Efficacy»">«Efficacy»</a></li>
+<li><a href="#Hva-er-det" title="Hva er det?">Hva er det?</a></li>
+<li><a href="#Tallene" title="Tallene">Tallene</a></li>
+<li><a href="#Formelen" title="Formelen">Formelen</a></li>
+<li><a href="#For-hver-gruppe" title="For hver gruppe">For hver gruppe</a></li>
+<li><a href="#Utregnet" title="Utregnet">Utregnet</a></li>
+<li><a href="#Sjansen-for-å-dø" title="Sjansen for å dø">Sjansen for å dø</a></li>
+<li><a href="#Alderenrisiko" title="Alderen/risiko">Alderen/risiko</a></li>
+</ul>
+</li>
+<li><a href="#Risikoen-ved-vaksinene" title="Risikoen ved vaksinene">Risikoen ved vaksinene</a><ul class="nav">
+<li><a href="#Levetid-på-immunitetbeskyttelse" title="Levetid på immunitet/beskyttelse">Levetid på immunitet/beskyttelse</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#Alternativ-til-vaksiner" title="Alternativ til vaksiner?">Alternativ til vaksiner?</a><ul class="nav">
+<li><a href="#Styrk-immunforsvaret" title="Styrk immunforsvaret">Styrk immunforsvaret</a></li>
+<li><a href="#IKKE-godkjent" title="IKKE godkjent">IKKE godkjent</a><ul class="nav">
+<li><a href="#Frarådes" title="Frarådes">Frarådes</a></li>
+</ul>
+</li>
+<li><a href="#Munnbindspriting" title="Munnbind/spriting">Munnbind/spriting</a><ul class="nav">
+<li><a href="#Forskningen-munnbind-og-slikt…" title="Forskningen, munnbind og slikt…">Forskningen, munnbind og slikt…</a></li>
+<li><a href="#Frivillighet" title="Frivillighet">Frivillighet</a></li>
+<li><a href="#Forskningen-og-overflatesmitte" title="Forskningen og overflatesmitte">Forskningen og overflatesmitte</a></li>
+<li><a href="#Pandoras-eske-er-åpnet" title="Pandoras eske er åpnet">Pandoras eske er åpnet</a></li>
+<li><a href="#Økonomien-og-idiotien" title="Økonomien og idiotien">Økonomien og idiotien</a></li>
+<li><a href="#Meg-selv" title="Meg selv">Meg selv</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div><div class="toc-menu"><a class="expand-toggle" href="#">Expand all</a><a class="back-to-top" href="#">Back to top</a><a class="go-to-bottom" href="#">Go to bottom</a></div>
+            </ul>
+        </div>
+    </div>
+    <div id="ui-toc-affix" class="ui-affix-toc ui-toc-dropdown unselectable hidden-print" data-spy="affix" style="top:17px;display:none;"  >
+        <div class="toc"><ul class="nav">
+<li class=""><a href="#Tanker-og-tall-om-Covid-19" title="Tanker og tall om Covid-19">Tanker og tall om Covid-19</a><ul class="nav">
+<li><a href="#Gledelig-nyhet-fra-Pfizer" title="Gledelig nyhet fra Pfizer?">Gledelig nyhet fra Pfizer?</a><ul class="nav">
+<li><a href="#«Efficacy»" title="«Efficacy»">«Efficacy»</a></li>
+<li><a href="#Hva-er-det" title="Hva er det?">Hva er det?</a></li>
+<li><a href="#Tallene" title="Tallene">Tallene</a></li>
+<li><a href="#Formelen" title="Formelen">Formelen</a></li>
+<li><a href="#For-hver-gruppe" title="For hver gruppe">For hver gruppe</a></li>
+<li><a href="#Utregnet" title="Utregnet">Utregnet</a></li>
+<li><a href="#Sjansen-for-å-dø" title="Sjansen for å dø">Sjansen for å dø</a></li>
+<li><a href="#Alderenrisiko" title="Alderen/risiko">Alderen/risiko</a></li>
+</ul>
+</li>
+<li><a href="#Risikoen-ved-vaksinene" title="Risikoen ved vaksinene">Risikoen ved vaksinene</a><ul class="nav">
+<li><a href="#Levetid-på-immunitetbeskyttelse" title="Levetid på immunitet/beskyttelse">Levetid på immunitet/beskyttelse</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#Alternativ-til-vaksiner" title="Alternativ til vaksiner?">Alternativ til vaksiner?</a><ul class="nav">
+<li><a href="#Styrk-immunforsvaret" title="Styrk immunforsvaret">Styrk immunforsvaret</a></li>
+<li><a href="#IKKE-godkjent" title="IKKE godkjent">IKKE godkjent</a><ul class="nav">
+<li><a href="#Frarådes" title="Frarådes">Frarådes</a></li>
+</ul>
+</li>
+<li><a href="#Munnbindspriting" title="Munnbind/spriting">Munnbind/spriting</a><ul class="nav">
+<li><a href="#Forskningen-munnbind-og-slikt…" title="Forskningen, munnbind og slikt…">Forskningen, munnbind og slikt…</a></li>
+<li><a href="#Frivillighet" title="Frivillighet">Frivillighet</a></li>
+<li><a href="#Forskningen-og-overflatesmitte" title="Forskningen og overflatesmitte">Forskningen og overflatesmitte</a></li>
+<li><a href="#Pandoras-eske-er-åpnet" title="Pandoras eske er åpnet">Pandoras eske er åpnet</a></li>
+<li><a href="#Økonomien-og-idiotien" title="Økonomien og idiotien">Økonomien og idiotien</a></li>
+<li><a href="#Meg-selv" title="Meg selv">Meg selv</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div><div class="toc-menu"><a class="expand-toggle" href="#">Expand all</a><a class="back-to-top" href="#">Back to top</a><a class="go-to-bottom" href="#">Go to bottom</a></div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.0/js/bootstrap.min.js" integrity="sha256-kJrlY+s09+QoWjpkOrXXwhxeaoDz9FW5SaxF8I0DibQ=" crossorigin="anonymous" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gist-embed/2.6.0/gist-embed.min.js" integrity="sha256-KyF2D6xPIJUW5sUDSs93vWyZm+1RzIpKCexxElmxl8g=" crossorigin="anonymous" defer></script>
+    <script>
+        var markdown = $(".markdown-body");
+        //smooth all hash trigger scrolling
+        function smoothHashScroll() {
+            var hashElements = $("a[href^='#']").toArray();
+            for (var i = 0; i < hashElements.length; i++) {
+                var element = hashElements[i];
+                var $element = $(element);
+                var hash = element.hash;
+                if (hash) {
+                    $element.on('click', function (e) {
+                        // store hash
+                        var hash = this.hash;
+                        if ($(hash).length <= 0) return;
+                        // prevent default anchor click behavior
+                        e.preventDefault();
+                        // animate
+                        $('body, html').stop(true, true).animate({
+                            scrollTop: $(hash).offset().top
+                        }, 100, "linear", function () {
+                            // when done, add hash to url
+                            // (default click behaviour)
+                            window.location.hash = hash;
+                        });
+                    });
+                }
+            }
+        }
+
+        smoothHashScroll();
+        var toc = $('.ui-toc');
+        var tocAffix = $('.ui-affix-toc');
+        var tocDropdown = $('.ui-toc-dropdown');
+        //toc
+        tocDropdown.click(function (e) {
+            e.stopPropagation();
+        });
+
+        var enoughForAffixToc = true;
+
+        function generateScrollspy() {
+            $(document.body).scrollspy({
+                target: ''
+            });
+            $(document.body).scrollspy('refresh');
+            if (enoughForAffixToc) {
+                toc.hide();
+                tocAffix.show();
+            } else {
+                tocAffix.hide();
+                toc.show();
+            }
+            $(document.body).scroll();
+        }
+
+        function windowResize() {
+            //toc right
+            var paddingRight = parseFloat(markdown.css('padding-right'));
+            var right = ($(window).width() - (markdown.offset().left + markdown.outerWidth() - paddingRight));
+            toc.css('right', right + 'px');
+            //affix toc left
+            var newbool;
+            var rightMargin = (markdown.parent().outerWidth() - markdown.outerWidth()) / 2;
+            //for ipad or wider device
+            if (rightMargin >= 133) {
+                newbool = true;
+                var affixLeftMargin = (tocAffix.outerWidth() - tocAffix.width()) / 2;
+                var left = markdown.offset().left + markdown.outerWidth() - affixLeftMargin;
+                tocAffix.css('left', left + 'px');
+            } else {
+                newbool = false;
+            }
+            if (newbool != enoughForAffixToc) {
+                enoughForAffixToc = newbool;
+                generateScrollspy();
+            }
+        }
+        $(window).resize(function () {
+            windowResize();
+        });
+        $(document).ready(function () {
+            windowResize();
+            generateScrollspy();
+        });
+
+        //remove hash
+        function removeHash() {
+            window.location.hash = '';
+        }
+
+        var backtotop = $('.back-to-top');
+        var gotobottom = $('.go-to-bottom');
+
+        backtotop.click(function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+            if (scrollToTop)
+                scrollToTop();
+            removeHash();
+        });
+        gotobottom.click(function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+            if (scrollToBottom)
+                scrollToBottom();
+            removeHash();
+        });
+
+        var toggle = $('.expand-toggle');
+        var tocExpand = false;
+
+        checkExpandToggle();
+        toggle.click(function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+            tocExpand = !tocExpand;
+            checkExpandToggle();
+        })
+
+        function checkExpandToggle () {
+            var toc = $('.ui-toc-dropdown .toc');
+            var toggle = $('.expand-toggle');
+            if (!tocExpand) {
+                toc.removeClass('expand');
+                toggle.text('Expand all');
+            } else {
+                toc.addClass('expand');
+                toggle.text('Collapse all');
+            }
+        }
+
+        function scrollToTop() {
+            $('body, html').stop(true, true).animate({
+                scrollTop: 0
+            }, 100, "linear");
+        }
+
+        function scrollToBottom() {
+            $('body, html').stop(true, true).animate({
+                scrollTop: $(document.body)[0].scrollHeight
+            }, 100, "linear");
+        }
+    </script>
+</body>
+
+</html>
